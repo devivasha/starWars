@@ -14,12 +14,12 @@ class App extends Component {
         this.onLoad();
     }
     onLoad = async () => {
-        const response1 = await axios.get('http://swapi.dev/api/planets', {});
-        const response2 = await axios.get('http://swapi.dev/api/planets/?page=2', {});
-        const response3 = await axios.get('http://swapi.dev/api/planets/?page=3', {});
-        const response4 = await axios.get('http://swapi.dev/api/planets/?page=4', {});
-        const response5 = await axios.get('http://swapi.dev/api/planets/?page=5', {});
-        const response6 = await axios.get('http://swapi.dev/api/planets/?page=6', {});
+        const response1 = await axios.get('https://swapi.dev/api/planets', {});
+        const response2 = await axios.get('https://swapi.dev/api/planets/?page=2', {});
+        const response3 = await axios.get('https://swapi.dev/api/planets/?page=3', {});
+        const response4 = await axios.get('https://swapi.dev/api/planets/?page=4', {});
+        const response5 = await axios.get('https://swapi.dev/api/planets/?page=5', {});
+        const response6 = await axios.get('https://swapi.dev/api/planets/?page=6', {});
         this.setState({
             planets: [...response1.data.results,...response2.data.results,...response3.data.results,...response4.data.results,...response5.data.results,...response6.data.results],
         })
